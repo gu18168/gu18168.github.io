@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Personal Drive 隐私政策</title>
+  <title>Personal Drive privacy policy</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1.25rem; line-height: 1.6; color: #1c1917; }
+    body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1.25rem; line-height: 1.6; color: #1c1917; }
     a { color: #1d4ed8; }
   </style>
 </head>
 <body>
-  <h1>隐私政策 / Privacy policy</h1>
-  <p>Personal Drive 只供 Nick Gu 本人使用，用来访问本人的 Google Drive。</p>
-  <h2>访问哪些数据</h2>
-  <p>在你授权之后，程序可以查看、下载、新建和修改你的 Google Drive 文件及文件夹。授权使用的是 Google 账号的 OAuth，程序保存刷新令牌，用来在这台电脑上继续访问 Drive。</p>
-  <h2>为什么访问</h2>
-  <p>这些权限只用于把你自己的文件同步到你自己的电脑，以及把你自己的电脑上的文件写回你的 Drive。程序不会把文件卖给别人，不会用文件做广告，也不会把文件交给其他服务。</p>
-  <h2>数据放在哪里</h2>
-  <p>文件仍在你的 Google Drive 和你自己的电脑上。OAuth 令牌保存在这台电脑的 rclone 配置里。撤销授权可以在 Google 账号的第三方访问权限页面完成。</p>
-  <p><a href="/">返回首页 / Home</a></p>
-  <p>联系 / Contact: <a href="https://github.com/gu18168">github.com/gu18168</a></p>
+  <h1>Personal Drive privacy policy</h1>
+  <p>This policy describes how Personal Drive, a desktop program used only by Nick Gu, collects and uses data. This page is public and does not require sign-in.</p>
+  <p>本政策说明 Personal Drive 如何收集和使用数据。此页公开，无需登录。</p>
+
+  <h2>Who this applies to</h2>
+  <p>Personal Drive is used only by Nick Gu to access Nick Gu's own Google Account. It is not offered to the public and does not create accounts for other people.</p>
+
+  <h2>Data the app accesses</h2>
+  <p>After Nick Gu grants permission, Personal Drive accesses Google Drive data through the Google Drive API:</p>
+  <ul>
+    <li>File and folder names, identifiers, sizes, and modification times.</li>
+    <li>File contents, so those files can be downloaded to the computer and uploaded back to Drive.</li>
+    <li>The OAuth access token and refresh token that Google issues for this access.</li>
+  </ul>
+  <p>Personal Drive does not request Gmail, Contacts, Calendar, Photos, or any other Google product. It does not read data from other people's accounts.</p>
+
+  <h2>How that data is collected</h2>
+  <p>Collection happens only after an OAuth consent on the computer where the program is installed. Google shows the consent screen, Nick Gu approves the Drive scope, and Google returns tokens to the program. The program then calls the Drive API to list, download, create, and update files that belong to that same Google Account.</p>
+
+  <h2>How that data is used</h2>
+  <p>Drive file metadata and file contents are used only to keep a copy of those files on Nick Gu's computer and to write changes from that computer back to Nick Gu's Drive. The refresh token is used only to obtain a new access token when the previous one expires, so the same sync can continue.</p>
+  <p>The data is not used for advertising, not sold, not used to train models, and not used to generate images, video, or text. Personal Drive does not use Google user data to create or process non-consensual intimate imagery of real people, including AI-generated imagery.</p>
+
+  <h2>Where data is stored and who can see it</h2>
+  <p>File contents remain in Google Drive and on the owner's computer. OAuth tokens are stored in the rclone configuration file on that computer. Personal Drive does not send Google user data to the developer of any other app, to an analytics service, or to any third party. No one other than Nick Gu operates this program.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>Files stay in Drive until Nick Gu deletes them there, and on the computer until Nick Gu deletes the local copy. OAuth tokens stay in the local configuration until Nick Gu deletes that configuration or revokes the app. Revoking access at <a href="https://myaccount.google.com/permissions">Google Account third-party access</a> stops further collection. Tokens already stored on the computer are then deleted with the local configuration.</p>
+
+  <h2>Contact</h2>
+  <p>Nick Gu, the owner of Personal Drive and of this website, is the contact for this policy.</p>
+  <p><a href="https://gu18168.github.io/">Home / 首页</a></p>
+  <p><a href="https://gu18168.github.io/terms.html">Terms of service / 服务条款</a></p>
 </body>
 </html>
